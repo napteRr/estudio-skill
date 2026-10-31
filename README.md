@@ -4,6 +4,8 @@ Una skill para agentes de Inteligencia Artificial (**Antigravity**, **Claude Cod
 
 Construida siguiendo las mejores prácticas oficiales de diseño de skills (**`skill-creator` / `writing-skills`**) con arquitectura de divulgación progresiva (*Progressive Disclosure*).
 
+🔗 **Repositorio:** [github.com/napteRr/estudio-skill](https://github.com/napteRr/estudio-skill)
+
 ---
 
 ## ⚡ ¿Cómo funciona?
@@ -31,6 +33,32 @@ El agente **no genera un resumen genérico**. Primero te pregunta cuáles de los
 
 ---
 
+## 🚀 Instalación Rápida con GitHub
+
+Cualquier persona puede instalar esta skill en su máquina clonando directamente desde GitHub:
+
+### 1. Global para Antigravity (todos los proyectos)
+```bash
+git clone https://github.com/napteRr/estudio-skill.git ~/.gemini/config/skills/estudio
+```
+
+### 2. Global para Claude Code
+```bash
+git clone https://github.com/napteRr/estudio-skill.git ~/.claude/skills/estudio
+```
+
+### 3. En un proyecto específico (Cursor / Antigravity / Claude Code)
+Dentro de la carpeta de tu materia o proyecto:
+```bash
+mkdir -p .agents/skills
+git clone https://github.com/napteRr/estudio-skill.git .agents/skills/estudio
+```
+
+### 4. En interfaces Web (ChatGPT / Claude.ai)
+No requiere terminal: simplemente descarga el repositorio o adjunta directamente el archivo [**`SKILL.md`**](https://raw.githubusercontent.com/napteRr/estudio-skill/main/SKILL.md) junto a tus apuntes en la conversación.
+
+---
+
 ## 📦 Estructura del Repositorio
 
 ```text
@@ -47,24 +75,16 @@ estudio-skill/
 
 ---
 
-## 🚀 Instalación y Uso
+## 🛠️ Requisitos para Exportar a PDF (Opcional)
 
-### En Antigravity / Cursor / Claude Code
-Clona o copia esta carpeta dentro de tu configuración de skills:
-```bash
-# Como skill global en Antigravity:
-cp -r estudio-skill ~/.gemini/config/skills/estudio
+Si utilizas un entorno con terminal y deseas compilar automáticamente los PDFs con diseño académico:
+- **Python 3** con el paquete `markdown` (`pip install markdown`).
+- **LibreOffice** (`libreoffice --headless`).
 
-# O en un proyecto específico (.agents/):
-mkdir -p .agents/skills/
-cp -r estudio-skill .agents/skills/estudio
-```
-
-### En interfaces Web (ChatGPT / Claude.ai)
-Simplemente adjunta el archivo `SKILL.md` junto a tu apunte o PDF en el chat.
+*(En caso de no contar con LibreOffice, la skill genera código HTML/Markdown listo para guardar como PDF desde el navegador con `Ctrl + P`).*
 
 ---
 
 ## 📄 Licencia
 
-Este proyecto está bajo la Licencia MIT.
+Este proyecto está bajo la [Licencia MIT](LICENSE).
